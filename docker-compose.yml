@@ -96,13 +96,3 @@ services:
       - kong-database
     ports:
       - "1337:1337"
-
-  ms-user:
-    build: ./apis/user/
-    container_name: ms_user
-    networks:
-      - kong-net
-    restart: on-failure
-    ports:
-      - 3000:3000
-
